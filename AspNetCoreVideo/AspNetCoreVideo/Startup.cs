@@ -41,11 +41,12 @@ namespace AspNetCoreVideo
 
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                app.UseDeveloperExceptionPage(); // middleware
             }
 
             app.Run(async (context) =>
             {
+                
                  await context.Response.WriteAsync(msg.GetMessage());
             });
         }
