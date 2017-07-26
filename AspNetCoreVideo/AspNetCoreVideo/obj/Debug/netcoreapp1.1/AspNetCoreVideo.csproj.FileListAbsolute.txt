@@ -1,0 +1,9 @@
+C:\Users\fay109\Source\Repos\jonasfagerberg\AspNetCoreVideo\AspNetCoreVideo\bin\Debug\netcoreapp1.1\AspNetCoreVideo.deps.json
+C:\Users\fay109\Source\Repos\jonasfagerberg\AspNetCoreVideo\AspNetCoreVideo\bin\Debug\netcoreapp1.1\AspNetCoreVideo.runtimeconfig.json
+C:\Users\fay109\Source\Repos\jonasfagerberg\AspNetCoreVideo\AspNetCoreVideo\bin\Debug\netcoreapp1.1\AspNetCoreVideo.runtimeconfig.dev.json
+C:\Users\fay109\Source\Repos\jonasfagerberg\AspNetCoreVideo\AspNetCoreVideo\bin\Debug\netcoreapp1.1\AspNetCoreVideo.dll
+C:\Users\fay109\Source\Repos\jonasfagerberg\AspNetCoreVideo\AspNetCoreVideo\bin\Debug\netcoreapp1.1\AspNetCoreVideo.pdb
+C:\Users\fay109\Source\Repos\jonasfagerberg\AspNetCoreVideo\AspNetCoreVideo\obj\Debug\netcoreapp1.1\AspNetCoreVideo.csprojResolveAssemblyReference.cache
+C:\Users\fay109\Source\Repos\jonasfagerberg\AspNetCoreVideo\AspNetCoreVideo\obj\Debug\netcoreapp1.1\AspNetCoreVideo.AssemblyInfo.cs
+C:\Users\fay109\Source\Repos\jonasfagerberg\AspNetCoreVideo\AspNetCoreVideo\obj\Debug\netcoreapp1.1\AspNetCoreVideo.dll
+C:\Users\fay109\Source\Repos\jonasfagerberg\AspNetCoreVideo\AspNetCoreVideo\obj\Debug\netcoreapp1.1\AspNetCoreVideo.pdb
