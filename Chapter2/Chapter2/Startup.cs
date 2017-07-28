@@ -9,10 +9,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using System.IO;
-using AspNetCoreVideo.Services;
+using Chapter2.Services;
+using Chapter2.Controllers;
 using Microsoft.AspNetCore.StaticFiles;
+using Microsoft.AspNetCore.Routing;
 
-namespace AspNetCoreVideo
+namespace Chapter2
 {
     public class Startup
     {
@@ -49,14 +51,27 @@ namespace AspNetCoreVideo
             // load the default index.html file in the wwwroot folder
             app.UseFileServer();
 
-            // if there is no defaul index.html in the wwwroot use the Index() class in the Controllers folder
-            app.UseMvcWithDefaultRoute(); 
+            // if there is no defaul index.html in the wwwroot use the Index() class in the ConfigureRoutes folder
+            //app.UseMvc(ConfigureRoutes);
+
+            // another way of msapping routes (no addtional method needed)
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Home}/{action=Index}/{id?}");
+            });
 
             app.Run(async (context) =>
             {
-                
-                 await context.Response.WriteAsync(msg.GetMessage());
+
+                await context.Response.WriteAsync(msg.GetMessage());
             });
         }
+
+        //private void ConfigureRoutes(IRouteBuilder routeBuilder)
+        //{
+        //    routeBuilder.MapRoute("Default","{Controller=Home}/{Action=Index}/{Id?}");
+        //}
     }
 }
