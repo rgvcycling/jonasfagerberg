@@ -1,15 +1,19 @@
-﻿using System;
+﻿using Chapter2.Models;
+using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace Chapter2.Controllers
 {
-    public class HomeController
+    public class HomeController : Controller
     {
-        public string Index()
+        public ViewResult Index()
         {
-            return "Hi Aby! I'm now in the Controller folder index class :) ";
+            var model = new Video { Id = 1, Title = "Shreck" };
+
+            return View(model);
         }
     }
 }
