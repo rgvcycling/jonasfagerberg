@@ -1,10 +1,21 @@
-﻿@model Chapter2.Models.Video
+﻿@model IEnumerable<Chapter2.Models.Video>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Video</title>
 </head>
 <body>
-    @Model.Title
+    <table>
+			Available Videos
+			@foreach (var video in Model) 
+			{
+		        <tr>
+                    <td>@video.Id.</td>
+                    <td>@video.Title</td>
+                </tr>	
+			}
+			        
+		
+	</table>
 </body>
 </html>
