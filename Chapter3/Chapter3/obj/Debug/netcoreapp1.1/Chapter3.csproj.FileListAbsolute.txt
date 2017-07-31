@@ -1,0 +1,10 @@
+/Users/raygarza/Documents/GitHub/jonasfagerberg/Chapter3/Chapter3/bin/Debug/netcoreapp1.1/Chapter3.deps.json
+/Users/raygarza/Documents/GitHub/jonasfagerberg/Chapter3/Chapter3/bin/Debug/netcoreapp1.1/Chapter3.runtimeconfig.json
+/Users/raygarza/Documents/GitHub/jonasfagerberg/Chapter3/Chapter3/bin/Debug/netcoreapp1.1/Chapter3.runtimeconfig.dev.json
+/Users/raygarza/Documents/GitHub/jonasfagerberg/Chapter3/Chapter3/bin/Debug/netcoreapp1.1/Chapter3.dll
+/Users/raygarza/Documents/GitHub/jonasfagerberg/Chapter3/Chapter3/bin/Debug/netcoreapp1.1/Chapter3.pdb
+/Users/raygarza/Documents/GitHub/jonasfagerberg/Chapter3/Chapter3/obj/Debug/netcoreapp1.1/Chapter3.csprojResolveAssemblyReference.cache
+/Users/raygarza/Documents/GitHub/jonasfagerberg/Chapter3/Chapter3/obj/Debug/netcoreapp1.1/Chapter3.csproj.CoreCompileInputs.cache
+/Users/raygarza/Documents/GitHub/jonasfagerberg/Chapter3/Chapter3/obj/Debug/netcoreapp1.1/Chapter3.AssemblyInfo.cs
+/Users/raygarza/Documents/GitHub/jonasfagerberg/Chapter3/Chapter3/obj/Debug/netcoreapp1.1/Chapter3.dll
+/Users/raygarza/Documents/GitHub/jonasfagerberg/Chapter3/Chapter3/obj/Debug/netcoreapp1.1/Chapter3.pdb

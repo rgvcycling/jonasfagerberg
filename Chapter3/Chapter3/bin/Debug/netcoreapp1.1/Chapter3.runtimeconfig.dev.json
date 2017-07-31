@@ -1,0 +1,7 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/Users/raygarza/.nuget/packages"
+    ]
+  }
+}

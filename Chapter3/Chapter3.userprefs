@@ -1,3 +1,22 @@
 ﻿<Properties StartupConfiguration="{AC6F5C5A-29F6-48F3-8CD5-326758973FB7}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Chapter3/Services/IVideoData.cs">
+    <Files>
+      <File FileName="Chapter3/Controllers/EmployeeController.cs" Line="28" Column="1" />
+      <File FileName="Chapter3/Startup.cs" Line="7" Column="33" />
+      <File FileName="Chapter3/Program.cs" Line="14" Column="1" />
+      <File FileName="Chapter3/Controllers/HomeController.cs" Line="4" Column="34" />
+      <File FileName="Chapter3/Models/Video.cs" Line="14" Column="1" />
+      <File FileName="Chapter3/Services/ConfigurationMessageService.cs" Line="23" Column="1" />
+      <File FileName="Chapter3/Services/HardCodedMessageService.cs" Line="16" Column="1" />
+      <File FileName="Chapter3/Services/IMessageService.cs" Line="13" Column="1" />
+      <File FileName="Chapter3/Services/IVideoData.cs" Line="13" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Chapter3 PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
 </Properties>
