@@ -1,9 +1,19 @@
+<<<<<<< HEAD
 ﻿using Chapter3.Services;
 using Chapter3.ViewModels;
 using Chapter3.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System;
+=======
+﻿using Microsoft.AspNetCore.Mvc;
+using Chapter3.Services;
+using System.Linq;
+using Chapter3.Entities;
+using Chapter3.ViewModels;
+using System;
+using Chapter3.Models;
+>>>>>>> 5358765057869b723bf1c25ac9ae42e9f17abb37
 
 namespace Chapter3.Controllers
 {
@@ -28,6 +38,7 @@ namespace Chapter3.Controllers
 
             return View(model);
         }
+<<<<<<< HEAD
         public IActionResult Details(int id)
         {
             var model = _videos.Get(id);
@@ -44,6 +55,8 @@ namespace Chapter3.Controllers
 
             });
         }
+=======
+>>>>>>> 5358765057869b723bf1c25ac9ae42e9f17abb37
 
     }
 }

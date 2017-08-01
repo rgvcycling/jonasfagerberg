@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
@@ -15,3 +16,22 @@ Global
 		{AC6F5C5A-29F6-48F3-8CD5-326758973FB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
+=======
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chapter3", "Chapter3\Chapter3.csproj", "{AC6F5C5A-29F6-48F3-8CD5-326758973FB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC6F5C5A-29F6-48F3-8CD5-326758973FB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC6F5C5A-29F6-48F3-8CD5-326758973FB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC6F5C5A-29F6-48F3-8CD5-326758973FB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC6F5C5A-29F6-48F3-8CD5-326758973FB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
+>>>>>>> 5358765057869b723bf1c25ac9ae42e9f17abb37

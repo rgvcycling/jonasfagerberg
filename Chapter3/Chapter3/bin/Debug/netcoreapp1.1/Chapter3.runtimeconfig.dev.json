@@ -1,7 +1,11 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
+<<<<<<< HEAD
       "C:\\Users\\fay109\\.nuget\\packages"
+=======
+      "/Users/raygarza/.nuget/packages"
+>>>>>>> 5358765057869b723bf1c25ac9ae42e9f17abb37
     ]
   }
 }
