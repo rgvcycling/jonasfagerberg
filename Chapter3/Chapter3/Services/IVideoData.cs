@@ -8,5 +8,6 @@ namespace Chapter3.Services
     {
         IEnumerable<Video> GetAll();
         Video Get(int id);
+        void Add(Video newVideo);
     }
 }

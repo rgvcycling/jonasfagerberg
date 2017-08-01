@@ -26,5 +26,11 @@ namespace Chapter3.Services
         {
             return _videos.FirstOrDefault(v => v.Id.Equals(id));
         }
+        public void Add(Video newVideo)
+        {
+            // figure out the next ID #
+            newVideo.Id = _videos.Max(v => v.Id) + 1;
+            _videos.Add(newVideo);
+        }
     }
 }

@@ -36,7 +36,7 @@ namespace Chapter3
             services.AddSingleton(provider => Configuration);
             services.AddSingleton<IMessageService, ConfigurationMessageService>(); // gets data for "msg"
             services.AddMvc(); // enable MVC services
-            services.AddScoped<IVideoData, MockVideoData>();
+            services.AddSingleton<IVideoData, MockVideoData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
