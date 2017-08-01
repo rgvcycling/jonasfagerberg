@@ -1,14 +1,14 @@
-﻿using Chapter3.Models;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using Microsoft.AspNetCore.Mvc;
 using Chapter3.Services;
+using System.Linq;
+using Chapter3.Entities;
+using Chapter3.ViewModels;
+using System;
+using Chapter3.Models;
 
 namespace Chapter3.Controllers
 {
-    
+
     public class HomeController : Controller
     {
         private IVideoData _videos;
@@ -19,7 +19,13 @@ namespace Chapter3.Controllers
 
         public ViewResult Index()
         {
-            var model = _videos.GetAll();
+            var model = _videos.GetAll().Select(video =>
+                                               new VideoViewModel
+                                               {
+                                                    Id = video.Id,
+                                                    Title = video.Title,
+                Genre = Enum.GetName(typeof(Genres), video.GenreId)
+                                                });
 
             return View(model);
         }

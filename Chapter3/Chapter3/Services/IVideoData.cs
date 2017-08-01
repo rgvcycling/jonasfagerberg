@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Chapter3.Models;
+using Chapter3.Entities;
 
 namespace Chapter3.Services
 {

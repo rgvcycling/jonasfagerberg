@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Chapter3.Models;
+using Chapter3.Entities;
 
 namespace Chapter3.Services
 {
@@ -12,9 +12,9 @@ namespace Chapter3.Services
         {
             _videos = new List<Video>
             {
-                new Video {Id = 1, Title="Snakes on a Plane"},
-                new Video {Id = 2, Title="Sharknado"},
-                new Video {Id = 3, Title="Game of Thrones"}
+                new Video {Id = 1, GenreId = 4, Title="Snakes on a Plane"},
+                new Video {Id = 2, GenreId = 4, Title="Sharknado"},
+                new Video {Id = 3, GenreId = 2, Title="Game of Thrones"}
             };
         }
         public IEnumerable<Video> GetAll()
