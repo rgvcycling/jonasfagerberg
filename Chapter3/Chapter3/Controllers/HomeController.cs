@@ -23,7 +23,7 @@ namespace Chapter3.Controllers
                                                {
                                                     Id = video.Id,
                                                     Title = video.Title,
-                Genre = Enum.GetName(typeof(Genres), video.GenreId)
+                                                    Genre = video.Genre.ToString()
                                                 });
 
             return View(model);
@@ -40,9 +40,15 @@ namespace Chapter3.Controllers
             {
                 Id = model.Id,
                 Title = model.Title,
-                Genre = Enum.GetName(typeof(Genres), model.GenreId)
+                Genre = model.Genre.ToString()
 
             });
+        }
+
+        // create action
+        public IActionResult Create()
+        {
+            return View();
         }
 
     }

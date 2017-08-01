@@ -13,9 +13,9 @@ namespace Chapter3.Services
         {
             _videos = new List<Video>
             {
-                new Video {Id = 1, GenreId = 4, Title="Snakes on a Plane"},
-                new Video {Id = 2, GenreId = 4, Title="Sharknado"},
-                new Video {Id = 3, GenreId = 2, Title="Game of Thrones"}
+                new Video {Id = 1, Genre = Models.Genres.Comedy, Title="Snakes on a Plane"},
+                new Video {Id = 2, Genre = Models.Genres.Action, Title="Sharknado"},
+                new Video {Id = 3, Genre = Models.Genres.Romance, Title="Game of Thrones"}
             };
         }
         public IEnumerable<Video> GetAll()
