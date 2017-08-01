@@ -5,18 +5,12 @@
     <title>Video</title>
 </head>
 <body>
-<<<<<<< HEAD
     
     <table>
 			Available Videos
 		<tr></tr>
         <tr></tr>
         <tr>
-=======
-    <table>
-			Available Videos</br></br>
-			<tr>
->>>>>>> 5358765057869b723bf1c25ac9ae42e9f17abb37
 				<b>
 				    <td><u>ID</u></td>
 				    <td><u>Genre</u></td>
@@ -24,7 +18,6 @@
 				</b>
 			</tr>
 
-<<<<<<< HEAD
             <!-- loop through all the videos in the Model -->
 			@foreach (var video in Model) 
 			{
@@ -32,12 +25,6 @@
                     <!-- create a linkable ID to the details view -->
                     <td>@Html.ActionLink(video.Id.ToString(), "Details", new { id = video.Id })</td>
                     
-=======
-			@foreach (var video in Model) 
-			{
-		        <tr>
-                    <td>@video.Id.</td>
->>>>>>> 5358765057869b723bf1c25ac9ae42e9f17abb37
 				    <td>@video.Genre</td>
                     <td>@video.Title</td>
                 </tr>	

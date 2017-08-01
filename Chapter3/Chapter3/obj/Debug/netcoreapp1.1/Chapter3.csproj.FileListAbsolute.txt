@@ -8,7 +8,6 @@
 /Users/raygarza/Documents/GitHub/jonasfagerberg/Chapter3/Chapter3/obj/Debug/netcoreapp1.1/Chapter3.AssemblyInfo.cs
 /Users/raygarza/Documents/GitHub/jonasfagerberg/Chapter3/Chapter3/obj/Debug/netcoreapp1.1/Chapter3.dll
 /Users/raygarza/Documents/GitHub/jonasfagerberg/Chapter3/Chapter3/obj/Debug/netcoreapp1.1/Chapter3.pdb
-<<<<<<< HEAD
 C:\Users\fay109\Source\Repos\jonasfagerberg\Chapter3\Chapter3\bin\Debug\netcoreapp1.1\Chapter3.deps.json
 C:\Users\fay109\Source\Repos\jonasfagerberg\Chapter3\Chapter3\bin\Debug\netcoreapp1.1\Chapter3.runtimeconfig.json
 C:\Users\fay109\Source\Repos\jonasfagerberg\Chapter3\Chapter3\bin\Debug\netcoreapp1.1\Chapter3.runtimeconfig.dev.json
@@ -18,5 +17,3 @@ C:\Users\fay109\Source\Repos\jonasfagerberg\Chapter3\Chapter3\obj\Debug\netcorea
 C:\Users\fay109\Source\Repos\jonasfagerberg\Chapter3\Chapter3\obj\Debug\netcoreapp1.1\Chapter3.AssemblyInfo.cs
 C:\Users\fay109\Source\Repos\jonasfagerberg\Chapter3\Chapter3\obj\Debug\netcoreapp1.1\Chapter3.dll
 C:\Users\fay109\Source\Repos\jonasfagerberg\Chapter3\Chapter3\obj\Debug\netcoreapp1.1\Chapter3.pdb
-=======
->>>>>>> 5358765057869b723bf1c25ac9ae42e9f17abb37

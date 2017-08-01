@@ -2,11 +2,7 @@
   "runtimeOptions": {
     "framework": {
       "name": "Microsoft.NETCore.App",
-<<<<<<< HEAD
       "version": "1.1.2"
-=======
-      "version": "1.1.1"
->>>>>>> 5358765057869b723bf1c25ac9ae42e9f17abb37
     },
     "configProperties": {
       "System.GC.Server": true
