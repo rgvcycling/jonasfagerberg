@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Chapter3.ViewModels.VideoViewModel>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Video</title>
+</head>
+<body>
+    
+    <table>
+			Available Videos
+		<tr></tr>
+        <tr></tr>
+        <tr>
+				<b>
+				    <td><u>ID</u></td>
+				    <td><u>Genre</u></td>
+				    <td><u>Movie</u></td>
+				</b>
+			</tr>
+
+            <!-- loop through all the videos in the Model -->
+			@foreach (var video in Model) 
+			{
+		        <tr>
+                    <!-- create a linkable ID to the details view -->
+                    <td>@Html.ActionLink(video.Id.ToString(), "Details", new { id = video.Id })</td>
+                    
+				    <td>@video.Genre</td>
+                    <td>@video.Title</td>
+                </tr>	
+			}
+			        
+		
+	</table>
+</body>
+</html>
