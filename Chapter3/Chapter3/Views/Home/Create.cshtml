@@ -5,6 +5,7 @@
 <h2>Create Video</h2>
 
 <form asp-action="Create" method="post">
+    <div asp-validation-summary="All"></div>
     <table>
         <tr>
             <td>
@@ -13,12 +14,14 @@
             <td>
                 <input asp-for="Title"/>
             </td>
+            <td><span asp-validation-for="Title"></span></td>
         </tr>
 
         <tr>
             <td><label asp-for="Genre"></label></td>
             <td><select asp-for="Genre" asp-items=
                         "Html.GetEnumSelectList<Genres>()"></select></td>
+            <td><span asp-validation-for="Genre"></span></td>
         </tr>
     </table>
 
