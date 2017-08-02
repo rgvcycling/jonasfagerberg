@@ -1,0 +1,9 @@
+C:\Users\fay109\Source\Repos\jonasfagerberg\Chapter4\Chapter4\Chapter4\bin\Debug\netcoreapp1.1\Chapter4.deps.json
+C:\Users\fay109\Source\Repos\jonasfagerberg\Chapter4\Chapter4\Chapter4\bin\Debug\netcoreapp1.1\Chapter4.runtimeconfig.json
+C:\Users\fay109\Source\Repos\jonasfagerberg\Chapter4\Chapter4\Chapter4\bin\Debug\netcoreapp1.1\Chapter4.runtimeconfig.dev.json
+C:\Users\fay109\Source\Repos\jonasfagerberg\Chapter4\Chapter4\Chapter4\obj\Debug\netcoreapp1.1\Chapter4.csprojResolveAssemblyReference.cache
+C:\Users\fay109\Source\Repos\jonasfagerberg\Chapter4\Chapter4\Chapter4\obj\Debug\netcoreapp1.1\Chapter4.AssemblyInfo.cs
+C:\Users\fay109\Source\Repos\jonasfagerberg\Chapter4\Chapter4\Chapter4\bin\Debug\netcoreapp1.1\Chapter4.dll
+C:\Users\fay109\Source\Repos\jonasfagerberg\Chapter4\Chapter4\Chapter4\bin\Debug\netcoreapp1.1\Chapter4.pdb
+C:\Users\fay109\Source\Repos\jonasfagerberg\Chapter4\Chapter4\Chapter4\obj\Debug\netcoreapp1.1\Chapter4.dll
+C:\Users\fay109\Source\Repos\jonasfagerberg\Chapter4\Chapter4\Chapter4\obj\Debug\netcoreapp1.1\Chapter4.pdb
