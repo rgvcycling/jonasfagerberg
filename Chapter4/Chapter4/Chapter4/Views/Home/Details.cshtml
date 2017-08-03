@@ -1,12 +1,11 @@
-﻿@model Chapter4.ViewModels.VideoViewModel
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title>Video Details</title>
-</head>
-<body>
-    @Html.ActionLink("Home", "Index")
-    <div>ID: @Model.Id</div>
-    <div>Title:@Model.Title</div>
-    <div>Genre: @Model.Genre</div>
-</body>
-</html>
+﻿@model VideoViewModel
+@{
+    ViewBag.Title = "Details";
+    
+}
+<div>Movie Details</div>
+<div>Id: @Model.Id</div>
+<div>Title: @Model.Title</div>
+<div>Genre: @Model.Genre</div>
+
+@Html.ActionLink("Home", "Index")
