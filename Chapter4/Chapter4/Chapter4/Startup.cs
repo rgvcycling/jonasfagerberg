@@ -13,6 +13,8 @@ using Chapter4.Services;
 using Chapter4.Controllers;
 using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.AspNetCore.Routing;
+using Chapter4.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Chapter4
 {
@@ -20,11 +22,14 @@ namespace Chapter4
     {
         public IConfiguration Configuration { get; set; }
 
-        public Startup()
+        public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json");
+                .AddJsonFile("appsettings.json", optional: true);
+
+            if (env.IsDevelopment())
+                builder.AddUserSecrets<Startup>();
 
             Configuration = builder.Build();
 
@@ -33,10 +38,14 @@ namespace Chapter4
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            var conn = Configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContext<VideoDbContext>(options =>
+            options.UseSqlServer(conn));
+
             services.AddSingleton(provider => Configuration);
             services.AddSingleton<IMessageService, ConfigurationMessageService>(); // gets data for "msg"
             services.AddMvc(); // enable MVC services
-            services.AddSingleton<IVideoData, MockVideoData>();
+            services.AddSingleton<IVideoData, SqlVideoData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -70,9 +79,6 @@ namespace Chapter4
             });
         }
 
-        //private void ConfigureRoutes(IRouteBuilder routeBuilder)
-        //{
-        //    routeBuilder.MapRoute("Default","{Controller=Home}/{Action=Index}/{Id?}");
-        //}
+        
     }
 }

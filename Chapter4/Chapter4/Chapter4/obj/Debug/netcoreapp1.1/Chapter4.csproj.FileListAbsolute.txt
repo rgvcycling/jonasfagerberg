@@ -7,3 +7,4 @@ C:\Users\fay109\Source\Repos\jonasfagerberg\Chapter4\Chapter4\Chapter4\bin\Debug
 C:\Users\fay109\Source\Repos\jonasfagerberg\Chapter4\Chapter4\Chapter4\bin\Debug\netcoreapp1.1\Chapter4.pdb
 C:\Users\fay109\Source\Repos\jonasfagerberg\Chapter4\Chapter4\Chapter4\obj\Debug\netcoreapp1.1\Chapter4.dll
 C:\Users\fay109\Source\Repos\jonasfagerberg\Chapter4\Chapter4\Chapter4\obj\Debug\netcoreapp1.1\Chapter4.pdb
+C:\Users\fay109\Source\Repos\jonasfagerberg\Chapter4\Chapter4\Chapter4\obj\Debug\netcoreapp1.1\UserSecretsAssemblyInfo.cs
