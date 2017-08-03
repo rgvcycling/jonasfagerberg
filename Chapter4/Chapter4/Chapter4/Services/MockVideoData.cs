@@ -32,5 +32,10 @@ namespace Chapter4.Services
             newVideo.Id = _videos.Max(v => v.Id) + 1;
             _videos.Add(newVideo);
         }
+
+        public int Commit()
+        {
+            return 0;
+        }
     }
 }

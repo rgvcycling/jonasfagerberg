@@ -18,8 +18,8 @@
     @foreach(var video in Model)
     {
         <tr>
-            <td>@Html.ActionLink(video.Id.ToString(), "Details",
-            new { id = video.Id }) </td>
+            <td><a asp-action="Details" asp-route-id="@video.Id">Details</a></td>
+            <td><a asp-action="Edit" asp-route-id="@video.Id">Edit</a></td>
             <td>@video.Title</td>
             <td>@video.Genre</td>
         </tr>

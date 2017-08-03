@@ -19,7 +19,7 @@ namespace Chapter4.Services
         public void Add(Video video)
         {
             _db.Add(video);
-            _db.SaveChanges();
+          
         }
 
         public Video Get(int id)
@@ -30,6 +30,10 @@ namespace Chapter4.Services
         public IEnumerable<Video> GetAll()
         {
             return _db.Videos;
+        }
+        public int Commit()
+        {
+            return _db.SaveChanges();
         }
     }
 }
