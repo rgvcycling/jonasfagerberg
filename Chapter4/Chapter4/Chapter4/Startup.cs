@@ -15,6 +15,8 @@ using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.AspNetCore.Routing;
 using Chapter4.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Chapter4.Entities;
 
 namespace Chapter4
 {
@@ -46,6 +48,8 @@ namespace Chapter4
             services.AddSingleton<IMessageService, ConfigurationMessageService>(); // gets data for "msg"
             services.AddMvc(); // enable MVC services
             services.AddSingleton<IVideoData, SqlVideoData>();
+            services.AddIdentity<User, IdentityRole>()
+                .AddEntityFrameworkStores<VideoDbContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -60,6 +64,8 @@ namespace Chapter4
 
             // load the default index.html file in the wwwroot folder
             app.UseFileServer();
+
+            app.UseIdentity();
 
             // if there is no defaul index.html in the wwwroot use the Index() class in the ConfigureRoutes folder
             //app.UseMvc(ConfigureRoutes);

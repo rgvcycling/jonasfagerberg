@@ -5,10 +5,11 @@ using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System;
 using Chapter4.Entities;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Chapter4.Controllers
 {
-
+    [Authorize]
     public class HomeController : Controller
     {
         private IVideoData _videos;
@@ -17,6 +18,7 @@ namespace Chapter4.Controllers
             _videos = videos;
         }
 
+        [AllowAnonymous]
         public ViewResult Index()
         {
             var model = _videos.GetAll().Select(video =>
