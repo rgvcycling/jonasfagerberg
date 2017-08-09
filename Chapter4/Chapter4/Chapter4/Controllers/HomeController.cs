@@ -1,9 +1,7 @@
 ﻿using Chapter4.Services;
 using Chapter4.ViewModels;
-using Chapter4.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
-using System;
 using Chapter4.Entities;
 using Microsoft.AspNetCore.Authorization;
 

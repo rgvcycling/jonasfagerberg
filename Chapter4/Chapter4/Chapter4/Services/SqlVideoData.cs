@@ -1,9 +1,6 @@
 ﻿using Chapter4.Data;
 using Chapter4.Entities;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Chapter4.Services
 {

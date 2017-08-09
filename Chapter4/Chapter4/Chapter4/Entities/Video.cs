@@ -11,7 +11,7 @@ namespace Chapter4.Entities
     {
         public int Id { get; set; }
 
-        [Required, MinLength(3), MaxLength(80), DataType(DataType.Password)]
+        [Required, MinLength(3), MaxLength(80)]
         public string Title { get; set; }
 
         [Display(Name ="Film Genre")]

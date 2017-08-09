@@ -1,10 +1,15 @@
-﻿<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!DOCTYPE html>
+
+<html>
 <head>
     <meta name="viewport" content="width-device-width" />
     <title>@ViewBag.Title</title>
 </head>
 <body>
     <div>
+        <div>
+            @await  Html.PartialAsync("_LoginLinks")
+        </div>
         @RenderBody()
     </div>
 <footer>

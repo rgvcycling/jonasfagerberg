@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,8 +6,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using System.IO;
 using Chapter4.Services;
-using Chapter4.Controllers;
-using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.AspNetCore.Routing;
 using Chapter4.Data;
 using Microsoft.EntityFrameworkCore;
@@ -44,12 +38,14 @@ namespace Chapter4
             services.AddDbContext<VideoDbContext>(options =>
             options.UseSqlServer(conn));
 
-            services.AddSingleton(provider => Configuration);
-            services.AddSingleton<IMessageService, ConfigurationMessageService>(); // gets data for "msg"
             services.AddMvc(); // enable MVC services
-            services.AddSingleton<IVideoData, SqlVideoData>();
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<VideoDbContext>();
+            services.AddSingleton(provider => Configuration);
+            services.AddSingleton<IMessageService, ConfigurationMessageService>(); // gets data for "msg"
+            
+            services.AddSingleton<IVideoData, SqlVideoData>();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,10 +58,11 @@ namespace Chapter4
                 app.UseDeveloperExceptionPage(); // middleware
             }
 
+            app.UseIdentity();
+
             // load the default index.html file in the wwwroot folder
             app.UseFileServer();
 
-            app.UseIdentity();
 
             // if there is no defaul index.html in the wwwroot use the Index() class in the ConfigureRoutes folder
             //app.UseMvc(ConfigureRoutes);
