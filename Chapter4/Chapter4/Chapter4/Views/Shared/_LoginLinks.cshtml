@@ -6,8 +6,8 @@
 @if (SignInManager.IsSignedIn(User))
 {
     // Signed in user
-    <div>@User.Identity.Name</div>
     <form method="post" asp-controller="Account" asp-action="Logout">
+        @User.Identity.Name
         <input type="submit" value="Logout" class="navbar-btn btn btn-danger"/>
     </form>
 }

@@ -1,0 +1,34 @@
+﻿@model IEnumerable<VideoViewModel>
+
+@{ 
+    ViewBag.Title = "Home";
+    
+}
+
+<div>Available Movies to View</div>
+
+<table>
+    
+    <tr>
+        <td>Id</td>
+        <td>Title</td>
+        <td>Genre</td>
+    </tr>
+        
+    @foreach(var video in Model)
+    {
+        <tr>
+            <td><a asp-action="Details" asp-route-id="@video.Id">Details</a></td>
+            <td><a asp-action="Edit" asp-route-id="@video.Id">Edit</a></td>
+            <td>@video.Title</td>
+            <td>@video.Genre</td>
+        </tr>
+    }
+</table>
+@section footer{
+    <div>This is the Index.cshtml footer. Go Aby!</div>
+
+    <div>
+        <a asp-action="Create">Add a new Movie</a>
+    </div>
+}
