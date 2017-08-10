@@ -7,6 +7,7 @@ namespace Chapter4.Models
         Horror,
         Comedy,
         Romance,
-        Action
+        Action,
+        SyFi
     }
 }
