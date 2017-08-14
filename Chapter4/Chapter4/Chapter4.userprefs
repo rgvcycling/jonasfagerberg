@@ -1,20 +1,10 @@
 ﻿<Properties StartupConfiguration="{AC6F5C5A-29F6-48F3-8CD5-326758973FB7}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Chapter3 Status">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Chapter4/Services/SqlVideoData.cs">
     <Files>
-      <File FileName="Chapter3/Controllers/EmployeeController.cs" Line="28" Column="1" />
-      <File FileName="Chapter3/Startup.cs" Line="7" Column="33" />
-      <File FileName="Chapter3/Program.cs" Line="14" Column="1" />
-      <File FileName="Chapter3/Controllers/HomeController.cs" Line="27" Column="68" />
-      <File FileName="Chapter3/Entities/Video.cs" Line="12" Column="41" />
-      <File FileName="Chapter3/Services/ConfigurationMessageService.cs" Line="23" Column="1" />
-      <File FileName="Chapter3/Services/HardCodedMessageService.cs" Line="16" Column="1" />
-      <File FileName="Chapter3/Services/IMessageService.cs" Line="13" Column="1" />
-      <File FileName="Chapter3/Services/IVideoData.cs" Line="3" Column="24" />
-      <File FileName="Chapter3/Services/MockVideoData.cs" Line="15" Column="47" />
-      <File FileName="Chapter3/Views/Home/Index.cshtml" Line="9" Column="30" />
-      <File FileName="Chapter3/Models/Genres.cs" Line="13" Column="1" />
-      <File FileName="Chapter3/ViewModels/VideoViewModel.cs" Line="9" Column="6" />
-      <File FileName="Chapter3 Status" />
+      <File FileName="Chapter4/Models/Genres.cs" Line="1" Column="1" />
+      <File FileName="Chapter4/Services/SqlVideoData.cs" Line="1" Column="1" />
+      <File FileName="Chapter4/Data/VideoDbContext.cs" Line="1" Column="1" />
+      <File FileName="Chapter4/Entities/Video.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
@@ -23,5 +13,6 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.Chapter3 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.Chapter4 PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
 </Properties>
