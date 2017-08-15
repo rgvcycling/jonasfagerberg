@@ -13,7 +13,7 @@ namespace VideoOnDemand.Entities
         [MaxLength(255)]
         public string ImageUrl { get; set; }
         [MaxLength(255)]
-        public string MargueeImageUrl { get; set; }
+        public string MarqueeImageUrl { get; set; }
         [MaxLength(80), Required]
         public string Title { get; set; }
         [MaxLength(1024)]
