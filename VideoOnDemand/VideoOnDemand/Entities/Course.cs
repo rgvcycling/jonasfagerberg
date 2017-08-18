@@ -21,6 +21,6 @@ namespace VideoOnDemand.Entities
 
         public int  InstructorId { get; set; }
         public Instructor Instructor { get; set; }
-        public List<Module> Module { get; set; }
+        public List<Module> Modules { get; set; }
     }
 }

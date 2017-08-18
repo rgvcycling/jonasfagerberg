@@ -20,12 +20,14 @@ namespace VideoOnDemand.Controllers
         public IActionResult Index()
         {
             var rep = new MockReadRepository();
-            var courses = rep.GetCourses("649112c5-a8e9-4312-9fff-fbec8d717f99");
-            var video = rep.GetVideo("649112c5-a8e9-4312-9fff-fbec8d717f99", 1);
+            var courses = rep.GetCourses("139a4661-4e83-44b5-af73-9e0aa383875f");
+            var course = rep.GetCourse("139a4661-4e83-44b5-af73-9e0aa383875f", 1);
+            var video = rep.GetVideo("139a4661-4e83-44b5-af73-9e0aa383875f", 1);
 
             if (!_signInManager.IsSignedIn(User))
                 return RedirectToAction("Login", "Account");
-            return View();
+
+            return RedirectToAction("Dashboard","Membership");
         }
 
         public IActionResult About()

@@ -13,8 +13,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="wwwroot\course-panel.css" />
+    <Content Include="wwwroot\css\course-panel.css" />
     <Content Include="wwwroot\css\login.css" />
+    <Content Include="wwwroot\css\membership.css" />
     <Content Include="wwwroot\css\menu.css" />
+    <Content Include="wwwroot\membership.css" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="6.1.1" />

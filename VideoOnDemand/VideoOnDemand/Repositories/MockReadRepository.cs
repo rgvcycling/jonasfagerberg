@@ -17,9 +17,9 @@ namespace VideoOnDemand.Repositories
 
         List<UserCourse> _userCourses = new List<UserCourse>
         {
-            new UserCourse { UserId = "649112c5-a8e9-4312-9fff-fbec8d717f99" , CourseId = 1 },
+            new UserCourse { UserId = "139a4661-4e83-44b5-af73-9e0aa383875f" , CourseId = 1 },
             new UserCourse { UserId = "00000000-0000-0000-0000-000000000000" , CourseId = 2 },
-            new UserCourse { UserId = "649112c5-a8e9-4312-9fff-fbec8d717f99" , CourseId = 3 },
+            new UserCourse { UserId = "139a4661-4e83-44b5-af73-9e0aa383875f" , CourseId = 3 },
             new UserCourse { UserId = "00000000-0000-0000-0000-000000000000" , CourseId = 1 }
         };
 
@@ -66,17 +66,33 @@ namespace VideoOnDemand.Repositories
         public IEnumerable<Course> GetCourses(string userId)
         {
             var courses = _userCourses.Where(uc => uc.UserId.Equals(userId))
-                .Join(_courses, uc => uc.CourseId, c => c.Id,
-                (uc, c) => new { Course = c })
+                .Join(_courses, uc => uc.CourseId, c => c.Id, (uc, c) => new { Course = c })
                 .Select(s => s.Course);
 
             foreach (var course in courses)
             {
-                course.Instructor = _instructors.SingleOrDefault(s => s.Id.Equals(course.Instructor));
-                course.Module = _modules.Where(m => m.CourseId.Equals(course.Id)).ToList();
+                course.Instructor = _instructors.SingleOrDefault(s => s.Id.Equals(course.InstructorId));
+                course.Modules = _modules.Where(m => m.CourseId.Equals(course.Id)).ToList();
             }
 
             return courses;
+        }
+        public Course GetCourse(string userId, int courseId)
+        {
+            var course = _userCourses.Where(uc => uc.UserId.Equals(userId))
+               .Join(_courses, uc => uc.CourseId, c => c.Id, (uc, c) => new { Course = c })
+               .SingleOrDefault(s => s.Course.Id.Equals(courseId)).Course;
+
+            course.Instructor = _instructors.SingleOrDefault(s => s.Id.Equals(course.InstructorId));
+            course.Modules = _modules.Where(m => m.CourseId.Equals(course.Id)).ToList();
+
+            foreach (var module in course.Modules)
+            {
+                module.Downloads = _downloads.Where(d => d.ModuleId.Equals(module.Id)).ToList();
+                module.Videos = _videos.Where(v => v.ModuleId.Equals(module.Id)).ToList();
+            }
+
+            return course;
         }
 
         public Video GetVideo(string userId, int videoId)
@@ -86,8 +102,18 @@ namespace VideoOnDemand.Repositories
                 .Join(_userCourses, v => v.CourseId, uc => uc.CourseId, (v, uc) => new { Video = v, UserCourse = uc })
                 .Where(vuc => vuc.UserCourse.UserId.Equals(userId))
                 .FirstOrDefault().Video;
-            
+
             return video;
+        }
+        public IEnumerable<Video> GetVideos(string userId, int moduleId = default(int))
+        {
+            var videos = _videos
+                .Join(_userCourses, v => v.CourseId, uc => uc.CourseId, (v, uc) => new { Video = v, UserCourse = uc })
+                .Where(vuc => vuc.UserCourse.UserId.Equals(userId));
+
+            return moduleId.Equals(0) ?
+                videos.Select(s => s.Video) :
+                videos.Where(v => v.Video.ModuleId.Equals(moduleId)).Select(s => s.Video);
         }
     }
 }

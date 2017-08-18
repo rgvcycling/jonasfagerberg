@@ -8,6 +8,6 @@ namespace VideoOnDemand.Models.MembershipViewModels
 {
     public class DashboardViewModel
     {
-        List<CourseDTO> Courses { get; set; }
+        public List<List<CourseDTO>> Courses { get; set; }
     }
 }
