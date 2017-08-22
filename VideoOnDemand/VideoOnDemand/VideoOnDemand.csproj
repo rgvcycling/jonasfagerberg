@@ -10,16 +10,12 @@
 
   <PropertyGroup>
     <UserSecretsId>aspnet-VideoOnDemand-ac67e92b-c944-4ddb-9d15-7c1649575a32</UserSecretsId>
+    <ApplicationIcon />
+    <OutputType>WinExe</OutputType>
+    <StartupObject>VideoOnDemand.Program</StartupObject>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Content Include="wwwroot\course-panel.css" />
-    <Content Include="wwwroot\css\course-panel.css" />
-    <Content Include="wwwroot\css\login.css" />
-    <Content Include="wwwroot\css\membership.css" />
-    <Content Include="wwwroot\css\menu.css" />
-    <Content Include="wwwroot\membership.css" />
-  </ItemGroup>
+  
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="6.1.1" />
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />

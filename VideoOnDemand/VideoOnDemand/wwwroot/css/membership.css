@@ -62,3 +62,6 @@ body {
 .membership hr.no-margin {
     margin: 0;
 }
+.membership h1, .membership h4 {
+    color: #666c74
+}

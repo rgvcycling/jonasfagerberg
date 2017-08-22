@@ -1,0 +1,19 @@
+﻿.navigation-bar {
+    margin-bottom: 10px;
+}
+.course-content .marquee {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+}
+.course-content .marquee .cover-image{
+    width: auto;
+    height: 140px;
+    position: absolute;
+    bottom: 0;
+    margin: 30px;
+    border: 4px solid #fff;
+    border-radius: 2px;
+}
