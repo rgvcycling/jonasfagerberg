@@ -104,7 +104,7 @@ namespace VideoOnDemand.Controllers
                 Video = mappedVideoDTO,
                 Instructor = mappedInstructorDTO,
                 Course = mappedCourseDTO,
-                LessinInfo = new LessonInfoDTO
+                LessonInfo = new LessonInfoDTO
                 {
                     LessonNumber = index + 1,
                     NumberOfLessons = count,

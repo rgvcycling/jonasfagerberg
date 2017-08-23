@@ -15,6 +15,10 @@
     <StartupObject>VideoOnDemand.Program</StartupObject>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <LangVersion>7.1</LangVersion>
+  </PropertyGroup>
+
   
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="6.1.1" />
