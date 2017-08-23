@@ -14,6 +14,6 @@ namespace VideoOnDemand.Models.DTOModels
         public string NextVideoTitle { get; set; }
         public string NextVideoThumbnail { get; set; }
         public string CurrentVideoTitle { get; set; }
-        public string CurrentVideoThumbnal { get; set; }
+        public string CurrentVideoThumbnail { get; set; }
     }
 }

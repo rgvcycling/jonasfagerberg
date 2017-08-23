@@ -113,7 +113,7 @@ namespace VideoOnDemand.Controllers
                     NextVideoTitle = nextTitle,
                     NextVideoThumbnail = nextThumb,
                     CurrentVideoTitle = video.Title,
-                    CurrentVideoThumbnal = video.Thumbnail
+                    CurrentVideoThumbnail = video.Thumbnail
 
                 }
 
