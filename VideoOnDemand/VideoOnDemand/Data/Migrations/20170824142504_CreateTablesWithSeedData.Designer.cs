@@ -8,9 +8,10 @@ using VideoOnDemand.Data;
 namespace VideoOnDemand.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20170824142504_CreateTablesWithSeedData")]
+    partial class CreateTablesWithSeedData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.1.2")
@@ -226,8 +227,8 @@ namespace VideoOnDemand.Data.Migrations
 
             modelBuilder.Entity("VideoOnDemand.Entities.Video", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("Id");
+                        
 
                     b.Property<int>("CourseId");
 
