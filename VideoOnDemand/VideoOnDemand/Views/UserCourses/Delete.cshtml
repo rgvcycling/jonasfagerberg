@@ -1,10 +1,10 @@
 @model UserCourseDTO
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Delete";
 }
 
-<h2>Details</h2>
+<h2>Delete</h2>
 
 <div>
     <h4>Users and Courses</h4>
@@ -20,7 +20,12 @@
         <dd>@Html.DisplayFor(model => model.UserId)</dd>
     </dl>
 </div>
-<div>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="UserId"/>
+    <input type="hidden" asp-for="CourseId"/>
+    <input type="submit" value="Delete" class="btn btn-default btn-sm" />
+
+
     <button-container controller="@ViewContext.RouteData.Values["controller"].ToString()" actions="Index,Edit" id-userId="@Model.UserId" id-courseId="@Model.CourseId" descriptions="Back to List"></button-container>
 
-</div>
+</form>

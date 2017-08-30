@@ -1,29 +1,29 @@
 @model IEnumerable<VideoOnDemand.Entities.Course>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Courses";
 }
 
-<h2>Index</h2>
+<h2 class="admin-top-margin">Courses</h2>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <button-container controller="@ViewContext.RouteData.Values["controller"].ToString()" actions="Create" descriptions="Create New"></button-container>
 </p>
-<table class="table table-condensed table-striped">
+<table class="table">
     <thead>
         <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.ImageUrl)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.MarqueeImageUrl)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Title)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Description)
-                </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MarqueeImageUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Instructor)
             </th>
@@ -31,29 +31,38 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ImageUrl)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MarqueeImageUrl)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Instructor.Name)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ImageUrl)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MarqueeImageUrl)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Instructor.Name)
+                </td>
+                <td class="button-col-width">
+                    <button-container controller="@ViewContext.RouteData.Values["controller"].ToString()" actions="Edit,Details,Delete" use-glyphs="true" id="@item.Id"></button-container>
+                   <!--
+                    <alternate-button-container controller="@ViewContext.RouteData.Values["controller"].ToString()"
+                                                action-edit action-details action-delete
+                                                btn-edit-success btn-details-primary btn-delete-danger
+                                                txt-edit="Edit"
+                                                gly-edit="th-list"
+                                                glyphs
+                                                id="@item.Id"></alternate-button-container>
+                    -->
+
+                </td>
+            </tr>
+        }
     </tbody>
 </table>

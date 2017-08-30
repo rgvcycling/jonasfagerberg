@@ -82,6 +82,7 @@ namespace VideoOnDemand.Controllers
             {
                 return NotFound();
             }
+            ViewData["ModuleId"] = new SelectList(_context.Modules, "Id", "Title");
             return View(download);
         }
 
